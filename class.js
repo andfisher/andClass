@@ -140,14 +140,7 @@
 			}
 
 			for (var i in config) {
-				if (Array.isArray(config[i])) {
-					// Don't want array to be shared via prototype, (unless it
-					// is a Use[able] class. It will be overriden by an
-					// individual instance's own property.
-					AndClass.prototype[i] = config[i];
-				} else {
-					AndClass.prototype[i] = config[i];
-				}
+				AndClass.prototype[i] = config[i];
 			}
 		}
 
